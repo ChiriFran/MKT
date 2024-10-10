@@ -5,6 +5,7 @@ const indicatorsContainer = document.querySelector('.indicators');
 
 let currentSlide = 0;
 let slideInterval; // Variable to hold the interval ID
+let autoPlayStarted = false; // To track if autoplay has been triggered
 
 // Function to show a specific slide
 function showSlide(index) {
@@ -47,8 +48,28 @@ function startSlideInterval() {
     slideInterval = setInterval(() => {
         currentSlide = (currentSlide < slides.length - 1) ? currentSlide + 1 : 0;
         showSlide(currentSlide);
-    }, 5000); // Change slide every 5 seconds
+    }, 4000); // Change slide every 5 seconds
 }
+
+// Function to check if the first slide is in view
+function isFirstSlideInView() {
+    const firstSlide = slides[0];
+    const rect = firstSlide.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+// Event listener to detect when the first slide comes into view
+window.addEventListener('scroll', () => {
+    if (!autoPlayStarted && isFirstSlideInView()) {
+        startSlideInterval(); // Start autoplay when the first slide is in view
+        autoPlayStarted = true; // Ensure this only runs once
+    }
+});
 
 // Previous slide button event
 prevButton.addEventListener('click', () => {
@@ -67,4 +88,3 @@ nextButton.addEventListener('click', () => {
 // Create indicators and show the first slide on page load
 createIndicators();
 showSlide(currentSlide);
-startSlideInterval(); // Start the automatic slide change interval

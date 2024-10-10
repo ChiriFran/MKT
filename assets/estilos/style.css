@@ -313,9 +313,8 @@
     line-height: 1.4;
     font-weight: 600;
     letter-spacing: 1px;
-    margin: 1rem 0;
     padding: 0 10%;
-    margin: 0 10%;
+    margin: 2% 10% 5%;
     text-align: center;
 }
 
@@ -385,10 +384,10 @@
     left: 0;
     width: 50px;
     /* Ancho del efecto de borde */
-    height: 80%;
+    height: 100%;
     background: linear-gradient(to right, rgba(255, 255, 255, 0.5), transparent);
     /* Gradiente que va de blanco a transparente */
-    backdrop-filter: blur (2px);
+    backdrop-filter: blur(2px);
     z-index: 2000;
 }
 
@@ -399,10 +398,10 @@
     right: 0;
     width: 50px;
     /* Ancho del efecto de borde */
-    height: 80%;
+    height: 100%;
     background: linear-gradient(to left, rgba(255, 255, 255, 0.5), transparent);
     /* Gradiente que va de blanco a transparente */
-    backdrop-filter: blur (2px);
+    backdrop-filter: blur(2px);
 }
 
 .slider {
@@ -423,7 +422,7 @@
     min-width: 100%;
     box-sizing: border-box;
     background-color: transparent;
-    
+
 }
 
 .slide img {
@@ -441,17 +440,19 @@
     border: none;
     cursor: pointer;
     padding: 10px;
-    border-radius: 50%;
+    border-radius: 10%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     font-size: 18px;
 }
 
 .prev {
-    left: 10px;
+    left: -3rem;
+    z-index: 10000;
 }
 
 .next {
-    right: 10px;
+    right: -3rem;
+    z-index: 10000;
 }
 
 .indicators {
@@ -462,8 +463,8 @@
 
 .indicator {
     display: inline-block;
-    width: 10px;
-    height: 10px;
+    width: 16px;
+    height: 16px;
     margin: 10px 5px;
     border-radius: 50%;
     background-color: #bbb;
@@ -476,9 +477,9 @@
 
 
 @media screen and (max-width: 700px) {
-    #logoImg {
-        width: 150px;
-        height: auto;
+
+    #logoContainer {
+        width: 50px;
     }
 
     #navMenu {
@@ -528,6 +529,10 @@
         margin: 10% 0;
     }
 
+    #hero::after {
+        background-image: url(../media/background/flor-colibri-mobile.png);
+    }
+
     #heroImg {
         width: 250px;
     }
@@ -536,6 +541,12 @@
         font-size: 1.6rem;
         padding: 10% 2%;
         text-align: center;
+    }
+
+    #heroLink {
+        font-size: 1.2rem;
+        padding: 5% 10%;
+        margin: 5% 5%;
     }
 
     #servicios {
@@ -572,19 +583,19 @@
     }
 
     #proyectosTitle span:nth-child(5) {
-        transform: translate(10px, -5px);
+        transform: translate(10px, -15px);
     }
 
     #proyectosTitle span:nth-child(6) {
-        transform: translate(26px, 34px);
+        transform: translate(26px, 25px);
     }
 
     #proyectosTitle span:nth-child(7) {
-        transform: translate(25px, -16px);
+        transform: translate(25px, -25px);
     }
 
     #proyectosTitle span:nth-child(8) {
-        transform: translate(50px, 40px);
+        transform: translate(50px, 20px);
     }
 
     #proyectosTitle span:nth-child(9) {
@@ -597,12 +608,12 @@
     }
 
     #proyectosTitle {
-        font-size: 2rem;
-        margin-top: 40%;
+        font-size: 2.4rem;
+        margin-top: 60%;
     }
 
     #proyectosText {
-        margin: 1rem 0;
+        margin: 3rem 0;
         padding: 0 0;
         text-align: start;
     }
