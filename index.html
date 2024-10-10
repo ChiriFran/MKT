@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Boostrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="./assets/estilos/normalize.css">
+    <link rel="stylesheet" href="./assets/estilos/style.css">
+    <link rel="icon" href="./assets/media/img/logo/logo.png">
+    <title>MKT - Carla Suarez</title>
+</head>
+
+<body>
+    <header id="headerContainer">
+        <section id="logoContainer">
+            <a href="./index.html" title="Inicio">
+                <img src="./assets/media/img/logo/logo.png" alt="MKT Carla Suarez" id="logoImg"
+                    title="MKT Carla Suarez">
+            </a>
+        </section>
+        <nav id="navMenu" aria-label="Barra de navegación">
+            <div id="closeNavIcon" class="bi bi-x-lg"></div>
+            <ul>
+                <li><a href="#" title="Servicios"><span class="cursiveText">S</span>ervicios</a></li>
+                <li><a href="#" title="Proyectos"><span class="cursiveText">P</span>royectos</a></li>
+            </ul>
+
+        </nav>
+        <div id="navIcon" class="bi bi-list"></div>
+    </header>
+
+    <section id="hero">
+        <div id="leftHero">
+            <img id="heroImg" src="./assets/media/img/hero/hero1.png" alt="">
+        </div>
+        <section id="rightHero">
+            <h2 id="heroTitle">MKT Carla Suarez brindando soluciones en B<span class="cursiveTitle">randing</span>,
+                creacion de C<span class="cursiveTitle">ontenido</span> y manejo de R<span
+                    class="cursiveTitle">edes</span> para <span class="bigText"> mujeres</span><span
+                    class="cursiveTitle"> S</span>oñadoras y <span class="cursiveTitle">V</span>alientes.</h2>
+            <a href="#" id="heroLink">¡Conoce todos nuestros servicios!</a>
+        </section>
+    </section>
+
+    <section id="servicios">
+        <h3 id="serviciosTitle">
+            <span class="cursiveTitle">S</span>
+            <span class="cursiveText">ervicios</span>
+        </h3>
+        <ul>
+            <li>
+                <a href="#" class="hover-content-1">
+                    <span class="cursiveTitle">C</span>reacion de <span class="cursiveText">C</span>ontenido
+                </a>
+            </li>
+            <li>
+                <a href="#" class="hover-content-2">
+                    <span class="cursiveTitle">M</span>anejo de <span class="cursiveText">R</span>edes
+                </a>
+            </li>
+            <li>
+                <a href="#" class="hover-content-3">
+                    <span class="cursiveTitle">B</span>randing
+                </a>
+            </li>
+        </ul>
+    </section>
+
+
+    <section id="proyectos">
+        <h3 id="proyectosTitle">
+            <span class="cursiveTitle">P</span><span>r</span><span>o</span><span
+                class="cursiveText">y</span><span>e</span><span>c</span><span>t</span><span>o</span><span>s</span>
+        </h3>
+        <p id="proyectosText">
+            ¡Transforma tu marca con nuestras plantillas personalizables!<br> Ideales para emprendedores, nuestras
+            soluciones de Creación de Contenido, Manejo de Redes y Branding te permiten destacar fácilmente. Ahorra
+            tiempo y esfuerzo personalizando plantillas diseñadas para atraer a tu audiencia.
+        </p>
+        <div class="sliderContainer">
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide active">
+                        <img src="./assets/media/img/mockups/plantilla-1.png" alt="Slide 1">
+                    </div>
+                    <div class="slide">
+                        <img src="./assets/media/img/mockups/plantilla-2.png" alt="Slide 2">
+                    </div>
+                    <div class="slide">
+                        <img src="./assets/media/img/mockups/plantilla-3.png" alt="Slide 3">
+                    </div>
+                    <div class="slide">
+                        <img src="./assets/media/img/mockups/plantilla-4.png" alt="Slide 4">
+                    </div>
+                    <div class="slide">
+                        <img src="./assets/media/img/mockups/plantilla-5.png" alt="Slide 5">
+                    </div>
+                    <div class="slide">
+                        <img src="./assets/media/img/mockups/plantilla-3.png" alt="Slide 4">
+                    </div>
+                    <div class="slide">
+                        <img src="./assets/media/img/mockups/plantilla-2.png" alt="Slide 5">
+                    </div>
+                    <!-- Add more slides as needed -->
+                </div>
+                <button class="prev" aria-label="Previous Slide">&#10094;</button>
+                <button class="next" aria-label="Next Slide">&#10095;</button>
+                <div class="indicators">
+                    <!-- Indicators will be generated dynamically -->
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+</body>
+
+<script src="./assets/scripts/nav.js"></script>
+<script src="./assets/scripts/serviciosAnim.js"></script>
+<script src="./assets/scripts/scrollAnim.js"></script>
+<script src="./assets/scripts/slider.js"></script>
+
+</html>
