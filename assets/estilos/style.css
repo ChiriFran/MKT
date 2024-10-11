@@ -618,7 +618,7 @@
     }
 
     #servicios {
-        padding: 5% 10%;
+        padding: 20% 10% 10%;
     }
 
     #servicios ul li a {
@@ -630,6 +630,16 @@
         right: 1rem;
         width: 180px;
         height: 220px;
+    }
+
+    #proyectos {
+        padding: 10% 0;
+    }
+
+    #proyectosTitle {
+        font-size: 2.4rem;
+        margin-top: 60%;
+        padding: 0 5%;
     }
 
     /* Estado inicial: Letras dispersas */
@@ -668,16 +678,6 @@
 
     #proyectosTitle span:nth-child(9) {
         transform: translate(40px, -20px);
-    }
-
-
-    #proyectos {
-        padding: 10% 10%;
-    }
-
-    #proyectosTitle {
-        font-size: 2.4rem;
-        margin-top: 60%;
     }
 
     #proyectosText {
