@@ -15,7 +15,7 @@ function handleProyectosTitleAnimation() {
     }
 }
 
-// Función para manejar la rotación del pseudo-elemento ::after de #proyectos
+// Función para manejar la rotación de los pseudo-elementos ::before y ::after de #proyectos
 function handleProyectosRotation() {
     const proyectos = document.getElementById('proyectos');
     const proyectosRect = proyectos.getBoundingClientRect();
@@ -28,13 +28,18 @@ function handleProyectosRotation() {
         const scrollOffset = window.scrollY - proyectosRect.top;
         const rotationAngle = scrollOffset * 0.1; // Ajusta la velocidad de rotación
 
-        // Aplicar la rotación solo si está visible
+        // Rotación para el ::after
         proyectos.style.setProperty('--after-rotation', `rotate(${rotationAngle}deg)`);
+
+        // Rotación inversa para el ::before
+        proyectos.style.setProperty('--before-rotation', `rotate(${-rotationAngle}deg)`);
     } else {
         // Resetea la rotación si el contenedor no está visible
         proyectos.style.setProperty('--after-rotation', 'rotate(0deg)');
+        proyectos.style.setProperty('--before-rotation', 'rotate(0deg)');
     }
 }
+
 
 // Escucha del evento de scroll y llamadas a las funciones correspondientes
 window.addEventListener('scroll', () => {
