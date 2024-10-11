@@ -567,6 +567,65 @@
     background-color: #717171;
 }
 
+/* ACERCA */
+#acerca{
+    position: relative;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 10% 10%;
+    border-bottom: 1px solid var(--main-color-black);
+    overflow: hidden;
+}
+
+#acerca::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    background-color: transparent;
+    background-image: var(--after-image, url(../media/background/corazon-pink-desktop.png));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 100;
+}
+
+#acercaInfo {
+    width: 40%;
+    z-index: 1000;
+    background-color: transparent;
+}
+
+#acercaInfo h2{
+    font-size: 2.2rem;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+    background-color: transparent;
+}
+
+.acercaText{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    line-height: 1.2;
+    background-color: transparent;
+}
+
+#acercaImg{
+    z-index: 1000;
+    background-color: transparent;
+}
+
+#acercaImg img{
+border: 3px solid var(--main-color-pink);
+width: 300px;
+}
+
 
 @media screen and (max-width: 700px) {
 
@@ -745,5 +804,37 @@
         padding: 8px;
     }
 
+    #acerca{
+        flex-flow: column;
+        padding: 35% 5%;
+    }
 
+    #acerca::after{
+        height: 100%;
+        background-image: var(--after-image, url(../media/background/corazon-pink-mobile.png));
+    }
+
+    #acercaInfo{
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+
+    #acercaInfo h2{
+        font-size: 1.4rem;
+    }
+
+    .acercaText{
+        font-size: 1rem;
+    }
+
+    #acercaImg{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #acercaImg img{
+        margin: 0.25rem;
+    }
 }
