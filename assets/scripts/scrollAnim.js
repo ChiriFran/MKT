@@ -1,17 +1,32 @@
-window.addEventListener('scroll', () => {
-    const proyectos = document.getElementById('proyectos');
+// Función para manejar la clase de animación de #proyectosTitle
+function handleProyectosTitleAnimation() {
     const proyectosTitle = document.getElementById('proyectosTitle');
+    const proyectosRect = proyectosTitle.getBoundingClientRect();
+
+    // Verificar si el título está visible en el viewport
+    const isProyectosTitleVisible = proyectosRect.top < window.innerHeight && proyectosRect.bottom > 0;
+
+    // Si el título es visible, añadir la clase de animación
+    if (isProyectosTitleVisible) {
+        proyectosTitle.classList.add('scroll-arranged');
+    } else {
+        // Eliminar la clase cuando el título ya no es visible
+        proyectosTitle.classList.remove('scroll-arranged');
+    }
+}
+
+// Función para manejar la rotación del pseudo-elemento ::after de #proyectos
+function handleProyectosRotation() {
+    const proyectos = document.getElementById('proyectos');
     const proyectosRect = proyectos.getBoundingClientRect();
-    const scrollPosition = window.scrollY;
-    const triggerPoint = proyectosTitle.offsetTop - window.innerHeight / 1;
 
     // Verificamos si #proyectos está visible en el viewport
-    const isProyectosVisible = proyectosRect.top < window.innerHeight && proyectosRect.bottom > 1;
+    const isProyectosVisible = proyectosRect.top < window.innerHeight && proyectosRect.bottom > 3;
 
     if (isProyectosVisible) {
         // Calcula la rotación basada en la posición de scroll
         const scrollOffset = window.scrollY - proyectosRect.top;
-        const rotationAngle = scrollOffset * 0.1; // Ajusta la velocidad de rotación multiplicando
+        const rotationAngle = scrollOffset * 0.1; // Ajusta la velocidad de rotación
 
         // Aplicar la rotación solo si está visible
         proyectos.style.setProperty('--after-rotation', `rotate(${rotationAngle}deg)`);
@@ -19,11 +34,10 @@ window.addEventListener('scroll', () => {
         // Resetea la rotación si el contenedor no está visible
         proyectos.style.setProperty('--after-rotation', 'rotate(0deg)');
     }
+}
 
-    // Añadir o quitar clase para #proyectosTitle
-    if (scrollPosition > triggerPoint) {
-        proyectosTitle.classList.add('scroll-arranged');
-    } else {
-        proyectosTitle.classList.remove('scroll-arranged');
-    }
+// Escucha del evento de scroll y llamadas a las funciones correspondientes
+window.addEventListener('scroll', () => {
+    handleProyectosRotation();        // Rotación del ::after de #proyectos
+    handleProyectosTitleAnimation();  // Animación del título #proyectosTitle
 });
