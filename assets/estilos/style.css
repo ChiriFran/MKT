@@ -640,6 +640,7 @@
 
 #acercaImg img:nth-child(2) {
     border: 10px solid rgb(247, 247, 247);
+    margin: 0 1rem;
 }
 
 #acercaImg::after {
