@@ -906,4 +906,16 @@
     #acercaImg img {
         margin: 0.25rem;
     }
+
+    #footerNav ul {
+        display: flex;
+        flex-flow: column ;
+    }
+
+    #footerNav ul li {
+        list-style: decimal-leading-zero;
+        width: 100%;
+        border-bottom: 1px solid var(--main-color-light);
+        padding: 1.5rem 0;
+    }
 }
