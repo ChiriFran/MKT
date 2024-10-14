@@ -465,6 +465,7 @@
     align-items: center;
     background-color: #ff309e25;
     overflow: hidden;
+    border-top: 1px solid var(--main-color-black);
 
 }
 
@@ -537,7 +538,7 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-.slider > button > img{
+.slider>button>img {
     width: 40px;
     background-color: transparent;
 }
@@ -552,7 +553,7 @@
     z-index: 10000;
 }
 
-.next > img{
+.next>img {
     transform: rotate(180deg);
 }
 
@@ -577,7 +578,7 @@
 }
 
 /* ACERCA */
-#acerca{
+#acerca {
     position: relative;
     display: flex;
     flex-flow: row;
@@ -589,7 +590,7 @@
     overflow: hidden;
 }
 
-#acerca::after{
+#acerca::after {
     content: "";
     position: absolute;
     top: 0;
@@ -610,14 +611,14 @@
     background-color: transparent;
 }
 
-#acercaInfo h2{
+#acercaInfo h2 {
     font-size: 2.2rem;
     line-height: 1.4;
     margin-bottom: 2rem;
     background-color: transparent;
 }
 
-.acercaText{
+.acercaText {
     font-size: 1.2rem;
     font-weight: 600;
     margin: 1rem 0;
@@ -625,14 +626,65 @@
     background-color: transparent;
 }
 
-#acercaImg{
+#acercaImg {
     z-index: 1000;
     background-color: transparent;
 }
 
-#acercaImg img{
-border: 3px solid var(--main-color-pink);
-width: 300px;
+#acercaImg img {
+    border: 3px solid var(--main-color-pink);
+    width: 300px;
+}
+
+#footerNav {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#footerNav ul {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#footerNav ul li {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 5% 5%;
+    background-color: var(--main-color-pink);
+    border-bottom: 2px solid var(--main-color-pink);
+    border-right: 2px solid var(--main-color-pink);
+}
+
+#footerNav ul li {
+    list-style: decimal-leading-zero;
+    width: 33.33%;
+}
+
+#footerNav ul li a {
+    text-decoration: none;
+    color: var(--main-color-light);
+    font-size: 2rem;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    transition: 1.2s;
+}
+
+#footerNav ul li a:hover {
+    font-family: var(--font-family-cursive);
+    letter-spacing: 3px;
+    transition: .8s;
 }
 
 
@@ -817,41 +869,41 @@ width: 300px;
         padding: 6px;
     }
 
-    .slider > button > img{
+    .slider>button>img {
         width: 34px;
     }
 
-    #acerca{
+    #acerca {
         flex-flow: column;
         padding: 35% 5%;
     }
 
-    #acerca::after{
+    #acerca::after {
         height: 85%;
         background-image: var(--after-image, url(../media/background/corazon-pink-mobile.png));
     }
 
-    #acercaInfo{
+    #acercaInfo {
         width: 100%;
         margin-bottom: 3rem;
     }
 
-    #acercaInfo h2{
+    #acercaInfo h2 {
         font-size: 1.4rem;
     }
 
-    .acercaText{
+    .acercaText {
         font-size: 1rem;
     }
 
-    #acercaImg{
+    #acercaImg {
         display: flex;
         flex-flow: column;
         align-items: center;
         justify-content: center;
     }
 
-    #acercaImg img{
+    #acercaImg img {
         margin: 0.25rem;
     }
 }
