@@ -585,8 +585,7 @@
     align-items: center;
     justify-content: space-around;
     width: 100%;
-    padding: 10% 10%;
-    border-bottom: 1px solid var(--main-color-black);
+    padding: 20% 10%;
     overflow: hidden;
 }
 
@@ -627,6 +626,7 @@
 }
 
 #acercaImg {
+    position: relative;
     z-index: 1000;
     background-color: transparent;
 }
@@ -634,6 +634,21 @@
 #acercaImg img {
     border: 3px solid var(--main-color-pink);
     width: 300px;
+}
+
+#acercaImg::after {
+    content: '';
+    position: absolute;
+    bottom: -35%;
+    left: 25%;
+    width: 250px;
+    height: 300px;
+    background-image: url(../media/img/carla/plumin-arriba.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border: 3px solid var(--main-color-pink);
+    z-index: 1000;
 }
 
 #footerNav {
@@ -658,10 +673,10 @@
     width: 100%;
     align-items: center;
     justify-content: center;
-    padding: 5% 5%;
+    padding: 5% 0;
     background-color: var(--main-color-pink);
-    border-bottom: 2px solid var(--main-color-pink);
-    border-right: 2px solid var(--main-color-pink);
+    border-bottom: 2px solid var(--main-color-light);
+    border-right: 2px solid var(--main-color-light);
 }
 
 #footerNav ul li {
@@ -903,19 +918,40 @@
         justify-content: center;
     }
 
+
+    #acercaImg::after {
+        content: '';
+        position: absolute;
+        bottom: 20%;
+        left: -5%;
+        width: 250px;
+        height: 300px;
+        background-image: url(../media/img/carla/plumin-arriba.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        border: 3px solid var(--main-color-pink);
+        z-index: 1000;
+    }
+
+
     #acercaImg img {
         margin: 0.25rem;
     }
 
+    #footerNav{
+        padding: 20% 0;
+    }
+
     #footerNav ul {
         display: flex;
-        flex-flow: column ;
+        flex-flow: column;
     }
 
     #footerNav ul li {
         list-style: decimal-leading-zero;
         width: 100%;
         border-bottom: 1px solid var(--main-color-light);
-        padding: 1.5rem 0;
+        padding: 8% 0;
     }
 }
