@@ -165,7 +165,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 105%;
     height: 100%;
     background-image: url(../media/background/flor-colibri-color-desktop.png);
     background-position: center;
@@ -634,8 +634,12 @@
 }
 
 #acercaImg img {
-    border: 3px solid var(--main-color-pink);
+    border: 8px solid var(--main-color-pink);
     width: 300px;
+}
+
+#acercaImg img:nth-child(2) {
+    border: 10px solid white;
 }
 
 #acercaImg::after {
@@ -649,16 +653,18 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
-    border: 3px solid var(--main-color-pink);
+    border: 8px solid var(--main-color-pink);
     z-index: 1000;
 }
 
+/* footerNav */
 #footerNav {
     display: flex;
     flex-flow: row;
     align-items: center;
     justify-content: center;
     width: 100%;
+    margin-bottom: 10%;
 }
 
 #footerNav ul {
@@ -675,7 +681,6 @@
     width: 100%;
     align-items: center;
     justify-content: center;
-    padding: 5% 0;
     background-color: var(--main-color-pink);
     border-bottom: 2px solid var(--main-color-light);
     border-right: 2px solid var(--main-color-light);
@@ -689,8 +694,10 @@
 #footerNav ul li a {
     text-decoration: none;
     color: var(--main-color-light);
-    font-size: 2rem;
+    font-size: 2.5rem;
     width: 100%;
+    height: 100%;
+    padding: 10% 0;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -703,6 +710,81 @@
     letter-spacing: 3px;
     transition: .8s;
 }
+
+/* dragAnim */
+
+.review-slider-container {
+    position: relative;
+    width: 80%;
+    margin: 10% auto;
+    overflow: hidden;
+}
+
+.review-slider {
+    display: flex;
+    transition: transform 0.5s ease;
+    cursor: grab;
+}
+
+.review-slider:active {
+    cursor: grabbing;
+}
+
+.review-slide {
+    display: flex;
+    min-width: 100%;
+    box-sizing: border-box;
+    user-select: none;
+    padding: 5% 5%;
+    /* Deshabilitar selección de texto */
+}
+
+.left-review-slide,
+.right-review-slide {
+    width: 50%;
+    padding: 20px;
+}
+
+.leftText {
+    font-size: 2rem;
+}
+
+.rightText {
+    font-size: 1.2rem;
+}
+
+.review-slider-container>button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    backdrop-filter: blur(2px);
+    color: var(--main-color-pink);
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    z-index: 1;
+}
+.review-prev img,
+.review-next img{
+    background-color: transparent;
+}
+
+.review-prev {
+    left: 0;
+    background-color: transparent;
+}
+
+.review-next {
+    right: 0;
+    background-color: transparent;
+}
+
+.review-next img {
+    transform: rotate(-180deg);
+
+}
+
 
 
 @media screen and (max-width: 700px) {
@@ -941,7 +1023,7 @@
         margin: 0.25rem;
     }
 
-    #footerNav{
+    #footerNav {
         padding: 20% 0;
     }
 
@@ -956,4 +1038,38 @@
         border-bottom: 1px solid var(--main-color-light);
         padding: 8% 0;
     }
+
+    .review-slider-container {
+        position: relative;
+        width: 90%;
+        margin: 5% auto;
+    }
+
+    .review-slide {
+        flex-flow: column;
+        padding: 2rem 0;
+    }
+
+    .review-slider-container>button {
+        position: absolute;
+        top: 0;
+        transform: translateY(0%);
+        font-size: 32px;
+    }
+
+    .left-review-slide,
+    .right-review-slide {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .review-prev {
+        left: 35%;
+    }
+
+    .review-next {
+        right: 35%;
+    }
+
+
 }
