@@ -730,7 +730,7 @@
 .review-slider-container {
     position: relative;
     width: 80%;
-    margin: 10% auto;
+    margin: 0 auto;
     overflow: hidden;
 }
 
@@ -761,6 +761,7 @@
 
 .leftText {
     font-size: 2rem;
+    line-height: 1.2;
 }
 
 .leftTextAuthor {
@@ -769,6 +770,8 @@
 
 .rightText {
     font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.4;
 }
 
 .review-slider-container>button {
@@ -802,6 +805,135 @@
 .review-next img {
     transform: rotate(-180deg);
 
+}
+
+#contactoContainer {
+    position: relative;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10% 10%;
+    margin: 10% 0;
+    background-color: var(--main-color-pink);
+    z-index: 1000;
+}
+
+#contactoContainer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../media/background/contacto-nubes-desktop.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 100;
+}
+
+.contactoLeft {
+    width: 40%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.contactoLeft img {
+    position: relative;
+    width: 400px;
+    border: 19px solid var(--main-color-light);
+}
+
+.contactoLeft img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../media/background/corner-paper.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1000;
+}
+
+.contactoRight {
+    width: 60%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.contactoRight span {
+    font-size: 5rem;
+    font-family: var(--font-family-cursive);
+    letter-spacing: 2px;
+    color: var(--main-color-light);
+    background-color: transparent;
+    z-index: 1000;
+}
+
+.contactoRight p {
+    font-size: 2.5rem;
+    font-weight: 600;
+    padding: 0 10%;
+    margin: 0.5rem 0;
+    color: var(--main-color-light);
+    background-color: transparent;
+    text-align: center;
+    z-index: 1000;
+}
+
+.contactoRight a {
+    position: relative;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-family: var(--font-family-title);
+    color: var(--main-color-pink);
+    background-color: var(--main-color-light);
+    margin-top: 10%;
+    border-radius: 50px;
+    padding: 1rem 5.5rem;
+    z-index: 1;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contactoRight a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--main-color-pink);
+    border-radius: 50px;
+    z-index: -1;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: scale(0.8);
+    /* Tamaño reducido inicialmente */
+    opacity: 0;
+}
+
+.contactoRight a:hover::before {
+    transform: scale(1.2);
+    /* Crece el fondo */
+    opacity: 0.7;
+    /* Hace visible el pseudo-elemento */
+}
+
+.contactoRight a:hover {
+    box-shadow: 0 4px 8px #ffa0d3a5;
+    color: var(--main-color-light);
+    /* Incrementa la sombra del botón al hacer hover */
 }
 
 
@@ -1093,13 +1225,48 @@
     .leftText {
         font-size: 1.8rem;
     }
-    
+
     .leftTextAuthor {
         font-size: 1rem;
     }
-    
+
     .rightText {
         font-size: 1rem;
+    }
+
+    #contactoContainer {
+        flex-flow: column;
+        padding: 50% 10% 20% 10%;
+    }
+
+    #contactoContainer::after {
+        background-image: url(../media/background/contacto-nubes-mobile.png);
+    }
+
+    .contactoLeft,
+    .contactoRight {
+        width: 100%;
+    }
+
+    .contactoLeft img {
+        width: 260px;
+        margin-bottom: 1rem;
+    }
+
+    .contactoRight span {
+        font-size: 4rem;
+        letter-spacing: 2px;
+        color: var(--main-color-light);
+        background-color: transparent;
+    }
+
+    .contactoRight p {
+        font-size: 1.2rem;
+    }
+
+    .contactoRight a {
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
     }
 
 }
