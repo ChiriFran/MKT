@@ -306,7 +306,7 @@
     position: absolute;
     top: -10%;
     left: -8%;
-    width: 250px;
+    width: 260px;
     height: 250px;
     background-color: transparent;
     background-image: var(--before-image, url(../media/background/rueda-promo-2.png));
@@ -323,8 +323,8 @@
 #proyectos::after {
     content: "";
     position: absolute;
-    top: -16%;
-    left: -14%;
+    top: -16.5%;
+    left: -12%;
     width: 400px;
     height: 400px;
     background-color: transparent;
@@ -713,6 +713,13 @@
     padding: 20px;
 }
 
+.right-review-slide{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .leftText {
     font-size: 2rem;
     line-height: 1.2;
@@ -769,7 +776,7 @@
     justify-content: space-between;
     width: 100%;
     padding: 10% 10%;
-    margin: 10% 0;
+    margin: 10% 0 0;
     background-color: var(--main-color-pink);
     z-index: 1000;
 }
@@ -891,7 +898,52 @@
     /* Incrementa la sombra del botón al hacer hover */
 }
 
+#footerContainer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
 
+.footerBrand{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerBrand h2 {
+    font-size: 8rem;
+
+}
+
+.footerAuthor {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 2% 0 2% 0;
+}
+
+.footerAuthor p {
+    font-size: 1.2rem;
+    font-family: var(--font-family-title);
+    color: var(--main-color-black);
+    letter-spacing: 2px;
+    opacity: 0.2;
+}
+
+.footerAuthor a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: var(--font-family-title);
+    color: var(--main-color-black);
+    letter-spacing: 2px;
+}
 
 @media screen and (max-width: 700px) {
 
