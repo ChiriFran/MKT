@@ -643,6 +643,19 @@
     margin: 0 1rem;
 }
 
+#acercaImg::before {
+    content: 'xxCar';
+    position: absolute;
+    bottom: -30%;
+    right: 0;
+    width: auto;
+    height: auto;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    font-family: var(--font-family-cursive);
+    z-index: 1000;
+}
+
 #acercaImg::after {
     content: '';
     position: absolute;
@@ -750,6 +763,10 @@
     font-size: 2rem;
 }
 
+.leftTextAuthor {
+    font-size: 1.2rem;
+}
+
 .rightText {
     font-size: 1.2rem;
 }
@@ -766,8 +783,9 @@
     font-size: 22px;
     z-index: 1;
 }
+
 .review-prev img,
-.review-next img{
+.review-next img {
     background-color: transparent;
 }
 
@@ -1003,25 +1021,25 @@
         justify-content: center;
     }
 
+    #acercaImg img:nth-child(2) {
+        border: 10px solid var(--main-color-pink);
+    }
+
+    #acercaImg::before {
+        bottom: -10%;
+        font-size: 2rem;
+    }
 
     #acercaImg::after {
-        content: '';
-        position: absolute;
         bottom: 20%;
         left: -5%;
         width: 250px;
         height: 300px;
-        background-image: url(../media/img/carla/plumin-arriba.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 100%;
-        border: 3px solid var(--main-color-pink);
-        z-index: 1000;
     }
 
 
     #acercaImg img {
-        margin: 0.25rem;
+        margin: 2.25rem 0;
     }
 
     #footerNav {
@@ -1072,5 +1090,16 @@
         right: 35%;
     }
 
+    .leftText {
+        font-size: 1.8rem;
+    }
+    
+    .leftTextAuthor {
+        font-size: 1rem;
+    }
+    
+    .rightText {
+        font-size: 1rem;
+    }
 
 }
