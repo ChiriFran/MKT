@@ -1,5 +1,5 @@
 // Select all links in the servicios section
-const links = document.querySelectorAll('#servicios ul li a');
+const links = document.querySelectorAll('#servicios ul li a h4');
 const servicios = document.getElementById('servicios');
 
 // Define the image paths for each link (provide your paths)

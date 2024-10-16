@@ -278,6 +278,8 @@
 
 #servicios ul li a h4 {
     background-color: transparent;
+    width: 100%;
+    height: 100%;
 }
 
 #servicios ul li a h4:hover {
