@@ -276,7 +276,11 @@
     transition: 1s;
 }
 
-#servicios ul li a:hover {
+#servicios ul li a h4 {
+    background-color: transparent;
+}
+
+#servicios ul li a h4:hover {
     font-family: var(--font-family-cursive);
     word-spacing: 3px;
     letter-spacing: 2px;
@@ -285,9 +289,7 @@
 
 .active {
     font-family: var(--font-family-cursive);
-    /* Otros estilos que quieras aplicar */
 }
-
 
 /* Proyectos */
 #proyectos {
@@ -592,9 +594,12 @@
     width: 300px;
 }
 
+
 #acercaImg img:nth-child(2) {
     border: 10px solid rgb(247, 247, 247);
     margin: 0 1rem;
+    width: 250px;
+    height: 300px;
 }
 
 #acercaImg::before {
@@ -680,7 +685,7 @@
 
 /* dragAnim */
 
-#feedbackContainer{
+#feedbackContainer {
     position: relative;
     display: flex;
     flex-flow: column;
@@ -690,7 +695,7 @@
     padding: 10% 0 5% 0;
 }
 
-#feedbackContainer::after{
+#feedbackContainer::after {
     content: "";
     position: absolute;
     top: 0;
@@ -818,11 +823,12 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    z-index: 100;
+    z-index: -100;
 }
 
 .contactoLeft {
-    width: 40%;
+    position: relative;
+    width: 35%;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -830,25 +836,24 @@
     background-color: transparent;
 }
 
-.contactoLeft img {
-    position: relative;
-    width: 400px;
-    border: 19px solid var(--main-color-light);
-}
-
-.contactoLeft img::after {
+.contactoLeft::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
     height: 100%;
-    background-image: url(../media/background/corner-paper.png);
+    background-image: url(../media/background/corner-paper-desktop.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    border: 8px solid var(--main-color-pink);
     z-index: 1000;
+}
+
+.contactoLeft img {
+    position: relative;
+    width: 100%;
+    border: 19px solid var(--main-color-light);
 }
 
 .contactoRight {
@@ -1227,6 +1232,11 @@
         margin: 2.25rem 0;
     }
 
+    #acercaImg img:nth-child(2) {
+        width: 300px;
+        height: 300px;
+    }
+
     #footerNav {
         padding: 20% 0 0 0;
     }
@@ -1243,13 +1253,13 @@
         padding: 8% 0;
     }
 
-    #feedbackContainer{
+    #feedbackContainer {
         padding: 40% 0 0 0;
     }
 
-    #feedbackContainer::after{
+    #feedbackContainer::after {
         height: 85%;
-        background-image: url(../media/background/flores-colgando-reseñas-mobile.png);        
+        background-image: url(../media/background/flores-colgando-reseñas-mobile.png);
     }
 
     .review-slider-container {
