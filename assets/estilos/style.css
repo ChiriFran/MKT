@@ -705,7 +705,7 @@
     background-color: transparent;
     background-image: url(../media/background/flores-colgando-reseñas-desktop.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     z-index: 10;
 }
