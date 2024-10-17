@@ -685,7 +685,99 @@
     transition: .8s;
 }
 
-/* dragAnim */
+/* modal */
+
+#openModalBtn {
+    text-decoration: none;
+    color: var(--main-color-light);
+    background-color: var(--main-color-pink);
+    font-size: 2.5rem;
+    width: 100%;
+    height: 100%;
+    padding: 10% 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    transition: 1.2s;
+    border: none;
+}
+
+.modal {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2% 5%;
+    opacity: 0;
+    /* Comienza con opacidad 0 */
+    transform: translateY(-50px);
+    /* Comienza desplazado hacia arriba */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    /* Transición suave de opacidad y transformación */
+    border: 10px solid var(--main-color-pink);
+}
+
+.modal-content{
+    text-align: center;
+}
+
+.modal-content h5{
+    font-size: 2.5rem;
+    font-family: var(--font-family-title);
+    letter-spacing: 3px;
+    margin: 1rem 0;
+}
+
+.modalText{
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.4;
+    padding: 0 20%;
+    margin: 1rem 0;
+}
+
+dialog::backdrop {
+    background-color: #ff309e59;
+    /* Fondo oscuro con opacidad */
+}
+
+dialog[open] {
+    opacity: 1;
+    /* Opacidad completa cuando está abierto */
+    transform: translateY(0);
+    /* Regresa a su posición original */
+    position: fixed;
+    /* Permite que el modal se mantenga centrado */
+    top: 50%;
+    /* Centro vertical */
+    left: 50%;
+    /* Centro horizontal */
+    transform: translate(-50%, -50%);
+    /* Ajuste para centrar completamente */
+}
+
+#closeModalBtn {
+    border: none;
+    background-color: transparent;
+    text-align: end;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--main-color-pink);
+}
+
+.modal.close {
+    opacity: 0;
+    /* Opacidad 0 al cerrar */
+    transform: translateY(-50px);
+    /* Se desplaza hacia arriba */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    /* Transición suave de salida */
+}
+
+
+/* feedbackSlider */
 
 #feedbackContainer {
     position: relative;
