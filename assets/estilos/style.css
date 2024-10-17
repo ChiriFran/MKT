@@ -1025,7 +1025,7 @@ dialog[open] {
 
 /* FOOTER */
 #footerContainer {
-    position: absolute;
+    position: relative;
     display: flex;
     flex-flow: column;
     align-items: center;
