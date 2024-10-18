@@ -180,7 +180,7 @@
             <li><a href="#acerca">Acerca de mí</a></li>
             <li><a href="#contactoContainer">Contacto</a></li>
             <li> <button id="openModalBtn">Newsletter</button></li>
-            <li><a href="#contactoContainer">Free Template</a></li>
+            <li> <button id="openModalTemplateBtn">Free Template</button></li>
 
 
             <dialog id="myDialog" class="modal">
@@ -188,16 +188,35 @@
                     <form method="dialog">
                         <button type="button" id="closeModalBtn">X</button>
                         <h5>Newsletter</h5>
-                        <p class="modalText">Unete a nuestra comunidad y recive promociones y plantillas exclusivas para miebros!</p>
-                        <p>con +5 plantillas de bienvenida!!!</p>
-                        <button id="actionBtn">Unirse</button>
+                        <p class="modalText">Unete a nuestra comunidad y recibe promociones y plantillas exclusivas para
+                            miebros!</p>
+                        <p class="promoText"> +5 plantillas de bienvenida!</p>
+                        <div class="modalForm">
+                            <input type="email">
+                            <button id="actionBtn">Unirse</button>
+                        </div>
+                    </form>
+                </div>
+            </dialog>
+
+
+            <dialog id="myDialogFreeTemplate" class="modalTemplate">
+                <div class="modal-content-template">
+                    <form method="dialogTemplate">
+                        <button type="button" id="closeModalTemplateBtn">X</button>
+                        <h5>Free Template Pack</h5>
+                        <p class="modalTemplateText">Obtene este paquete unico de plantillas listas para usar.</p>
+                        <p class="promoTemplateText">+10 plantillas</p>
+                        <div class="modalTemplateForm">
+                            <input type="email">
+                            <button id="actionTemplateBtn">Obtener</button>
+                        </div>
                     </form>
                 </div>
             </dialog>
 
 
             <div id="feedbackContainer">
-
                 <div class="review-slider-container">
                     <div class="review-slider">
                         <div class="review-slide">
@@ -302,6 +321,6 @@
             <script src="./assets/scripts/scrollAnim.js"></script>
             <script src="./assets/scripts/slider.js"></script>
             <script src="./assets/scripts/dragSlider.js"></script>
-            <script src="./assets/scripts/modalNewsletter.js"></script>
+            <script src="./assets/scripts/modal.js"></script>
 
 </html>
